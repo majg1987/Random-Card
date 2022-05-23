@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -12,18 +18,49 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
+
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <h1 class="mt-5 mb-5 text-white">Random Card Dealer</h1>
+      <div id="carta" class="bg-white mb-5 p-0">
+        <div class="d-flex ">
+          <p class="palo align-self-top fw-bolder ms-3  fw-bolder"></p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center ">
+          <p id="numero" class=" fw-bolder  "></p>
+        </div>
+        <div class="d-flex justify-content-end">
+          <p class="palo bajo fw-bolder  mb-0 me-3"></p>
+        </div>
       </div>
+
+      <p id="timeout"></p>
+
+      <form action="">
+        <div class="input-group w-50 mx-auto mb-3">
+          <span class="input-group-text ">Width & Heigth</span>
+          <input
+            id="ancho"
+            type="number"
+            aria-label="Width"
+            class="form-control"
+            value="250"
+          />
+          <input
+            id="alto"
+            type="number"
+            aria-label="Heigth"
+            class="form-control"
+            value="350"
+          />
+        </div>
+      </form>
+
+      <button type="button" id="random" class="btn btn-warning ">
+        Random
+      </button>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
